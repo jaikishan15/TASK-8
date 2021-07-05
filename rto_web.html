@@ -1,0 +1,98 @@
+<script> 
+    function lw() {
+    var command = document.getElementById("in1").value
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET","http://192.168.43.110/cgi-bin/rto.py?x="+i, true)
+    xhr.send()
+    xhr.onload = function() {
+    var out = xhr.responseText;
+    document.getElementById("d1").innerHTML = out;
+    
+}
+    
+}
+    </script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle information</title>
+</head>
+<style>
+    body{
+        background-image: url("https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80");
+        background-size: cover;
+        height: 100%;
+    }
+    .button{
+        color: black ;
+        background-color: palegreen;
+        padding: 30px;
+        font-size: 20px;
+        border-radius: 50%;
+        margin: auto;
+        position: absolute;
+        transition: 0.2s;
+        border-bottom: solid;
+        box-shadow: silver;
+        text-align: center;
+        right: 300px;
+        top: 20px;
+
+    }
+        .button:hover {
+            background-color: aqua;
+        }
+    
+        .button:active {
+            background-color: darkgreen;
+            box-shadow: 0 10px #666;
+            transform: translateY(4px);
+        }
+        input{
+            text-align: left;
+            font-size: 40px;
+            background-color: darkturquoise;
+            
+        }   
+        h1{
+            font-size: 50px;
+            color: red;
+            top: opx;
+
+        }    
+        .a3 {
+            font-size: 40px;
+            text-align: center;
+            
+        }
+
+        #d1{
+            color:rgba(0, 0, 0, 0.8)(127, 212, 71);
+            border: medium dashed black;
+            font-size: 30px;
+            transform: scale(0.75,0.75);
+            position: relative;
+            bottom: 50px;
+            top: 4z0px;
+            background-color: lightsalmon;
+            text-shadow: 0 3px rgb(243,240,240);
+            }
+
+</style>
+<body>
+    <div class="h1" style="text-align: center;">
+        <h2><i> Welcome to Vehicle information Website</i></h2>
+
+    <div class="a3"><i><b>  <input id="in1" /></b></i></div>
+    <button class="button" onclick="lw()"> <b>Display</b></div>
+        <pre>
+            <div id="d1">  <div />
+                <pre/> 
+</body>
+</html>
